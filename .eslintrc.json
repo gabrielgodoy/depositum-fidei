@@ -1,3 +1,38 @@
 {
-  "extends": "next/core-web-vitals"
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "eslint:recommended",
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:prettier/recommended",
+    "prettier"
+  ],
+  "plugins": ["@typescript-eslint", "simple-import-sort"],
+  "rules": {
+    "complexity": ["warn", 15],
+    "indent": "off", // leave this to prettier, so they won't conflict
+    "quotes": ["error", "double", { "avoidEscape": true }],
+    "semi": ["error", "always"],
+    "eqeqeq": [2, "smart"],
+    "no-duplicate-imports": "warn",
+    "no-nested-ternary": "warn",
+    "linebreak-style": 0,
+    "no-alert": "error",
+    "no-console": ["warn", { "allow": ["warn", "error"] }],
+    "no-debugger": "error",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/explicit-module-boundary-types": 0,
+    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/no-shadow": "warn",
+    "prettier/prettier": 2,
+    "react/react-in-jsx-scope": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "simple-import-sort/imports": "warn",
+    "simple-import-sort/exports": "warn"
+  }
 }
