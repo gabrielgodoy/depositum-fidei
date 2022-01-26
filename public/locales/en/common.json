@@ -1,0 +1,5 @@
+{
+  "h1": "A simple example",
+  "title": "Home | next-i18next",
+  "error-with-status": "A {{statusCode}} error occurred on server"
+}

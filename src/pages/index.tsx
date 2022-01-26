@@ -1,10 +1,14 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import styles from "./index.module.scss";
 
 const Home: NextPage = () => {
+  const { t } = useTranslation("common");
+
   return (
     <div className={styles.container}>
       <Head>
@@ -17,6 +21,8 @@ const Home: NextPage = () => {
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
+
+        <p>{t("h1")}</p>
 
         <p className={styles.description}>
           Get started by editing{" "}
@@ -69,5 +75,11 @@ const Home: NextPage = () => {
     </div>
   );
 };
+
+export const getStaticProps = async ({ locale }: { locale: string }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, ["common"])),
+  },
+});
 
 export default Home;
