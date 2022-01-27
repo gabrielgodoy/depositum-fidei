@@ -1,0 +1,7 @@
+{
+  "i18n-ally.localesPaths": ["public/locales"],
+  "i18n-ally.dirStructure": "dir",
+  "i18n-ally.editor.preferEditor": true,
+  "i18n-ally.enabledParsers": ["yaml", "json"],
+  "i18n-ally.keystyle": "nested"
+}
