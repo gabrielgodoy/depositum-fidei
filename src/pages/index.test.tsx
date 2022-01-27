@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "utils/TestUtils";
 
 import Home from "./index";
 
@@ -7,7 +7,7 @@ describe("Home", () => {
     render(<Home />);
 
     const heading = screen.getByRole("heading", {
-      name: /welcome to next\.js!/i,
+      name: /What Depositum Fidei means/i,
     });
 
     expect(heading).toBeInTheDocument();

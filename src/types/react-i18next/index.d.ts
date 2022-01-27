@@ -6,11 +6,11 @@ import home from "../../../public/locales/en/home.json";
 
 declare module "react-i18next" {
   interface CustomTypeOptions {
-    defaultNS: "common";
+    defaultNS: typeof common;
     resources: {
       common: typeof common;
       home: typeof home;
-      churchFathers: typeof churchFathers;
+      "church-fathers": typeof churchFathers;
     };
   }
 }

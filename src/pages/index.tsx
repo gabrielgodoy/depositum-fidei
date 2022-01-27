@@ -26,13 +26,13 @@ const Home: NextPage = () => {
           locale={router.locale === "en" ? "pt-BR" : "en"}
           passHref
         >
-          <button>{t("change-locale")}</button>
+          <button>{t("common:change-locale")}</button>
         </Link>
         <Link href="/church-fathers" passHref>
-          <button type="button">{t("to-second-page")}</button>
+          <button type="button">{t("common:to-second-page")}</button>
         </Link>
 
-        <h1>{t("whatDepositumFideiMeans", { ns: "home" })}</h1>
+        <h1>{t("home:what-depositum-fidei-means")}</h1>
         <p>
           Depositum fidei é uma expressão em latim que significa{" "}
           <strong>depósito da fé</strong>, que consiste no corpo da verdade
