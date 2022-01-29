@@ -3,13 +3,15 @@ import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const ChurchFathers = () => {
-  const { t } = useTranslation(["common", "church-fathers"]);
+  const { t } = useTranslation();
 
   return (
     <>
       <main>
         <Link href="/" passHref>
-          <button type="button">{t("church-fathers:back-to-home")}</button>
+          <button type="button">
+            {t("backToHome", { ns: "churchFathers" })}
+          </button>
         </Link>
       </main>
     </>
@@ -18,7 +20,7 @@ const ChurchFathers = () => {
 
 export const getStaticProps = async ({ locale }: { locale: string }) => ({
   props: {
-    ...(await serverSideTranslations(locale, ["common", "church-fathers"])),
+    ...(await serverSideTranslations(locale, ["common", "churchFathers"])),
   },
 });
 

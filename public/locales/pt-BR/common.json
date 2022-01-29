@@ -1,7 +1,6 @@
 {
   "h1": "Um simples exemplo",
   "title": "Home | next-i18next",
-  "change-locale": "Mudar locale",
-  "error-with-status": "Um erro {{statusCode}} que ocorreu no servidor",
-  "to-second-page": "Para a segundo página"
+  "changeLocale": "Mudar locale",
+  "toSecondPage": "Para a segundo página"
 }
