@@ -1,5 +1,6 @@
 import johnPaulii from "assets/images/john-paul-ii.jpeg";
 import { Modal } from "components";
+import { Counter } from "components/Counter";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
@@ -24,6 +25,7 @@ const Home: NextPage = () => {
         <link href="/favicon.ico" rel="icon" />
       </Head>
       <main>
+        <Counter key="some_key" />
         <Link
           href="/"
           locale={router.locale === "en" ? "pt-BR" : "en"}

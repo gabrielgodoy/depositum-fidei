@@ -6,9 +6,11 @@ import CssBaseline from "@mui/material/CssBaseline";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import { appWithTranslation } from "next-i18next";
+import { Provider } from "react-redux";
 
 import { createEmotionCache } from "../createEmotionCache";
 import { theme } from "../mui-theme";
+import { store } from "../redux/store";
 
 const clientSideEmotionCache = createEmotionCache();
 
@@ -19,10 +21,12 @@ function MyApp(props: AppProps & { emotionCache: EmotionCache }) {
       <Head>
         <meta content="initial-scale=1, width=device-width" name="viewport" />
       </Head>
-      <ThemeProvider theme={theme.light}>
-        <CssBaseline />
-      </ThemeProvider>
-      <Component {...pageProps} />
+      <Provider store={store}>
+        <ThemeProvider theme={theme.light}>
+          <CssBaseline />
+          <Component {...pageProps} />
+        </ThemeProvider>
+      </Provider>
     </CacheProvider>
   );
 }

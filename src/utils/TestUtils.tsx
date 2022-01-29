@@ -1,9 +1,9 @@
+import { Store } from "@reduxjs/toolkit";
 import { render as rtlRender } from "@testing-library/react";
-import { i18n as I18NextClient } from "i18next";
 import { RouterContext } from "next/dist/shared/lib/router-context";
 import { NextRouter } from "next/router";
-import { i18n } from "next-i18next";
-import { I18nextProvider } from "react-i18next";
+import { Provider } from "react-redux";
+import { store } from "redux/store";
 
 const mockRouter: NextRouter = {
   basePath: "",
@@ -39,9 +39,11 @@ const render = (
 ) => {
   if (!wrapper) {
     wrapper = ({ children }) => (
-      <RouterContext.Provider value={{ ...mockRouter, ...router }}>
-        {children}
-      </RouterContext.Provider>
+      <Provider store={store}>
+        <RouterContext.Provider value={{ ...mockRouter, ...router }}>
+          {children}
+        </RouterContext.Provider>
+      </Provider>
     );
   }
   return rtlRender(ui, { wrapper, ...options });
