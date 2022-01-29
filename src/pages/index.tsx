@@ -1,4 +1,5 @@
 import johnPaulii from "assets/images/john-paul-ii.jpeg";
+import { Modal } from "components";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
@@ -6,12 +7,14 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useState } from "react";
 
 import styles from "./index.module.scss";
 
 const Home: NextPage = () => {
   const { t } = useTranslation();
   const router = useRouter();
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className={styles.container}>
@@ -33,6 +36,11 @@ const Home: NextPage = () => {
         </Link>
 
         <h1>{t("whatDepositumFideiMeans", { ns: "home" })}</h1>
+        <button onClick={() => setIsOpen(true)}>open modal</button>
+        <Modal isLoading onClose={() => setIsOpen(false)} open={isOpen}>
+          asdasd asd asdsadas ds asdasd asd asdsadas ds asdasd asd asdsadas ds
+        </Modal>
+
         <p>
           Depositum fidei é uma expressão em latim que significa{" "}
           <strong>depósito da fé</strong>, que consiste no corpo da verdade
