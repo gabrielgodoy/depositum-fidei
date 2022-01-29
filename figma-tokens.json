@@ -1865,10 +1865,11 @@
         "value": "#cc8b42",
         "type": "color"
       }
+    },
+    "Default": {
+      "value": "4",
+      "type": "borderRadius"
     }
   },
-  "default": {
-    "value": "4",
-    "type": "borderRadius"
-  }
+  "default": {}
 }
