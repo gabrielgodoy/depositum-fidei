@@ -17,8 +17,6 @@ const Home: NextPage = () => {
 
   return (
     <div className={styles.container}>
-      <SideMenu />
-
       <Head>
         <title>{pages.home.title}</title>
         <meta content={pages.home.title} name="description" />

@@ -19,7 +19,8 @@ interface IModalExtraProps {
   customStyle?: CSSProperties;
 }
 
-export type Props = Omit<DialogProps, "maxWidth" | "title"> & IModalExtraProps;
+export type IModalProps = Omit<DialogProps, "maxWidth" | "title"> &
+  IModalExtraProps;
 
 export function Modal({
   title,
@@ -40,7 +41,7 @@ export function Modal({
   hideBackdrop,
   customStyle,
   ...restProps
-}: Props) {
+}: IModalProps) {
   const defaultPadding = "16px";
 
   return (
