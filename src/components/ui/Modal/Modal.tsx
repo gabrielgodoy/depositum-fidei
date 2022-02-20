@@ -1,6 +1,6 @@
 import Cancel from "@mui/icons-material/Cancel";
 import { Dialog, DialogContent, DialogProps, DialogTitle } from "@mui/material";
-import { LoadingSpinner } from "components/LoadingSpinner";
+import { LoadingSpinner } from "components/ui/LoadingSpinner";
 import { CSSProperties } from "react";
 
 import style from "./Modal.module.scss";

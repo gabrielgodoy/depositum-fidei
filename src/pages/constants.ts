@@ -1,3 +1,8 @@
+export interface IPageDetail {
+  path: string;
+  title: string;
+}
+
 export const pages = {
   home: {
     path: "/",
