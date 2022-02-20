@@ -19,36 +19,34 @@ const Home: NextPage = () => {
   return (
     <Layout pageDetail={pages.home}>
       <div className={styles.container}>
-        <main>
-          <Link
-            href="/"
-            locale={router.locale === "en" ? "pt-BR" : "en"}
-            passHref
-          >
-            <button>{t("changeLocale")}</button>
-          </Link>
+        <Link
+          href="/"
+          locale={router.locale === "en" ? "pt-BR" : "en"}
+          passHref
+        >
+          <button>{t("changeLocale")}</button>
+        </Link>
 
-          <h1>{t("whatDepositumFideiMeans", { ns: "home" })}</h1>
+        <h1>{t("whatDepositumFideiMeans", { ns: "home" })}</h1>
 
-          <p>
-            Depositum fidei é uma expressão em latim que significa{" "}
-            <strong>depósito da fé</strong>, que consiste no corpo da verdade
-            revelada nas escrituras e na tradição sagrada.
-          </p>
-          <p>
-            <strong>Fidei depositum</strong> também é o nome da constituição
-            apostólica do Papa João Paulo II, emitida em 11 de outubro de 1992,
-            onde fala sobre o Catecismo da Igreja Católica.
-          </p>
-          <div className={styles.hero}>
-            <Image
-              alt="John Paul II"
-              layout="fill"
-              quality={100}
-              src={johnPaulii}
-            />
-          </div>
-        </main>
+        <p>
+          Depositum fidei é uma expressão em latim que significa{" "}
+          <strong>depósito da fé</strong>, que consiste no corpo da verdade
+          revelada nas escrituras e na tradição sagrada.
+        </p>
+        <p>
+          <strong>Fidei depositum</strong> também é o nome da constituição
+          apostólica do Papa João Paulo II, emitida em 11 de outubro de 1992,
+          onde fala sobre o Catecismo da Igreja Católica.
+        </p>
+        <div className={styles.hero}>
+          <Image
+            alt="John Paul II"
+            layout="fill"
+            quality={100}
+            src={johnPaulii}
+          />
+        </div>
       </div>
     </Layout>
   );
