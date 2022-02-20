@@ -1,0 +1,13 @@
+.sideMenu {
+  background: #e5e5e5;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.links {
+  align-items: center;
+  display: flex;
+  grid-gap: 10px;
+}
