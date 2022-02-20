@@ -10,7 +10,7 @@
     "plugin:prettier/recommended",
     "prettier"
   ],
-  "plugins": ["@typescript-eslint", "simple-import-sort"],
+  "plugins": ["@typescript-eslint", "simple-import-sort", "testing-library"],
   "rules": {
     "complexity": ["warn", 15],
     "indent": "off", // leave this to prettier, so they won't conflict
@@ -37,5 +37,15 @@
     "react-hooks/exhaustive-deps": "warn",
     "simple-import-sort/imports": "warn",
     "simple-import-sort/exports": "warn"
-  }
+  },
+  "overrides": [
+    // Only uses Testing Library lint rules in test files
+    {
+      "files": [
+        "**/__tests__/**/*.[jt]s?(x)",
+        "**/?(*.)+(spec|test).[jt]s?(x)"
+      ],
+      "extends": ["plugin:testing-library/react"]
+    }
+  ]
 }
