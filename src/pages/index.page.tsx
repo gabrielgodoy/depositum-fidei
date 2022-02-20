@@ -8,6 +8,7 @@ import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
+import { pages } from "./constants";
 import styles from "./index.module.scss";
 
 const Home: NextPage = () => {
@@ -19,8 +20,8 @@ const Home: NextPage = () => {
       <SideMenu />
 
       <Head>
-        <title>Depositum Fidei</title>
-        <meta content="Depositum Fidei" name="description" />
+        <title>{pages.home.title}</title>
+        <meta content={pages.home.title} name="description" />
         <link href="/favicon.png" rel="icon" />
       </Head>
 
